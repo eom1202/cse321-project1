@@ -1,0 +1,99 @@
+
+\documentclass[sigconf]{acmart}
+\AtBeginDocument{%
+  \providecommand\BibTeX{{%
+    Bib\TeX}}}
+
+\usepackage{lipsum}
+
+\setcopyright{acmlicensed}
+\copyrightyear{2018}
+\acmYear{2018}
+\acmDOI{XXXXXXX.XXXXXXX}
+\acmConference[Conference acronym 'XX]{Make sure to enter the correct
+  conference title from your rights confirmation email}{June 03--05,
+  2018}{Woodstock, NY}
+
+\acmISBN{978-1-4503-XXXX-X/2018/06}
+
+\begin{document}
+
+\title{CSE321 - Assignment \#1}
+
+\author{\textcolor{blue}{Kim Kim (20210000)}}
+\affiliation{%
+  \institution{UNIST}
+  \country{South Korea}
+}
+\email{XXXXXXXXXXX@unist.ac.kr}
+
+\renewcommand{\shortauthors}{\textcolor{blue}{Kim et al.}}
+
+
+
+\settopmatter{printacmref=false} % Removes citation block in the first page
+\renewcommand\footnotetextcopyrightpermission[1]{} % Removes footnote with conference info
+
+
+
+\maketitle
+
+
+\section{INTRODUCTION}
+\lipsum[1-3]
+
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figure/ERD_example1.png}
+    \caption{Original ER Diagram}
+    \label{fig:original_erd}
+\end{figure*}
+
+\section{Review of the Original Design}
+\lipsum[1-8]
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\linewidth]{figure/revison_example.pdf}
+    \caption{Revision~1}
+    \label{rev:1}
+\end{figure}
+
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=0.6\textwidth]{figure/ERD_example2.png}
+    \caption{Revised ER Diagram}
+    \label{fig:revised_erd}
+\end{figure*}
+
+\section{Revision Details}
+\textbf{Revision 1: Cardinality Change in the \texttt{Enrolls} Relationship :}
+As shown in Figure~\ref{rev:1}, I originally modeled the \texttt{Enrolls} relationship between \texttt{Student} and \texttt{Course} as a one-to-many ($1:N$) relationship. I incorrectly assumed that the relationship should only be viewed from the student's perspective. However, the specification states that a single course is attended by multiple students. Therefore, I corrected the cardinality to a many-to-many ($M:N$) relationship.
+
+\lipsum[1-8]
+
+\section{CONCLUSION}
+\lipsum[1-2]
+
+
+%\bibliographystyle{ACM-Reference-Format}
+%\bibliography{reference}
+
+\end{document}
+
+
+% \begin{figure*}[t]
+%     \centering
+%     % 왼쪽: Original Image
+%     \begin{minipage}{0.45\textwidth}
+%         \centering
+%         \includegraphics[width=\linewidth]{figure/ERD_example1.png} % 실제 이미지 파일명으로 변경
+%         \caption{Original Design}
+%     \end{minipage}\hfill
+%     % 오른쪽: Revised Image
+%     \begin{minipage}{0.45\textwidth}
+%         \centering
+%         \includegraphics[width=\linewidth]{figure/ERD_example2.png} % 실제 이미지 파일명으로 변경
+%         \caption{Revised Design}
+%     \end{minipage}
+% \end{figure*}
